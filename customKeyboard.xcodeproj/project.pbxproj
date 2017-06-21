@@ -13,6 +13,11 @@
 		1FD04B871EFA1FB800E8B6E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD04B851EFA1FB800E8B6E5 /* Main.storyboard */; };
 		1FD04B891EFA1FB800E8B6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD04B881EFA1FB800E8B6E5 /* Assets.xcassets */; };
 		1FD04B8C1EFA1FB800E8B6E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD04B8A1EFA1FB800E8B6E5 /* LaunchScreen.storyboard */; };
+		1FD04B9B1EFA5AEE00E8B6E5 /* Toolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FD04B9A1EFA5AEE00E8B6E5 /* Toolbar.xib */; };
+		1FD04B9E1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04B9D1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m */; };
+		1FD04BA41EFA65D200E8B6E5 /* EKWCustomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04BA31EFA65D200E8B6E5 /* EKWCustomInputView.m */; };
+		1FD04BA71EFA680700E8B6E5 /* EKWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04BA61EFA680700E8B6E5 /* EKWTextField.m */; };
+		1FD04BAA1EFA695800E8B6E5 /* EKWKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04BA91EFA695800E8B6E5 /* EKWKeyboardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,15 @@
 		1FD04B881EFA1FB800E8B6E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FD04B8B1EFA1FB800E8B6E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FD04B8D1EFA1FB800E8B6E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FD04B9A1EFA5AEE00E8B6E5 /* Toolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toolbar.xib; sourceTree = "<group>"; };
+		1FD04B9C1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboardToolbar.h; sourceTree = "<group>"; };
+		1FD04B9D1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboardToolbar.m; sourceTree = "<group>"; };
+		1FD04BA21EFA65D200E8B6E5 /* EKWCustomInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWCustomInputView.h; sourceTree = "<group>"; };
+		1FD04BA31EFA65D200E8B6E5 /* EKWCustomInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWCustomInputView.m; sourceTree = "<group>"; };
+		1FD04BA51EFA680700E8B6E5 /* EKWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWTextField.h; sourceTree = "<group>"; };
+		1FD04BA61EFA680700E8B6E5 /* EKWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWTextField.m; sourceTree = "<group>"; };
+		1FD04BA81EFA695800E8B6E5 /* EKWKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWKeyboardView.h; sourceTree = "<group>"; };
+		1FD04BA91EFA695800E8B6E5 /* EKWKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWKeyboardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +81,15 @@
 				1FD04B8A1EFA1FB800E8B6E5 /* LaunchScreen.storyboard */,
 				1FD04B8D1EFA1FB800E8B6E5 /* Info.plist */,
 				1FD04B7C1EFA1FB800E8B6E5 /* Supporting Files */,
+				1FD04B9A1EFA5AEE00E8B6E5 /* Toolbar.xib */,
+				1FD04B9C1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.h */,
+				1FD04B9D1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m */,
+				1FD04BA21EFA65D200E8B6E5 /* EKWCustomInputView.h */,
+				1FD04BA31EFA65D200E8B6E5 /* EKWCustomInputView.m */,
+				1FD04BA51EFA680700E8B6E5 /* EKWTextField.h */,
+				1FD04BA61EFA680700E8B6E5 /* EKWTextField.m */,
+				1FD04BA81EFA695800E8B6E5 /* EKWKeyboardView.h */,
+				1FD04BA91EFA695800E8B6E5 /* EKWKeyboardView.m */,
 			);
 			path = customKeyboard;
 			sourceTree = "<group>";
@@ -141,6 +164,7 @@
 				1FD04B8C1EFA1FB800E8B6E5 /* LaunchScreen.storyboard in Resources */,
 				1FD04B891EFA1FB800E8B6E5 /* Assets.xcassets in Resources */,
 				1FD04B871EFA1FB800E8B6E5 /* Main.storyboard in Resources */,
+				1FD04B9B1EFA5AEE00E8B6E5 /* Toolbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +176,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FD04B841EFA1FB800E8B6E5 /* ViewController.m in Sources */,
+				1FD04B9E1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m in Sources */,
 				1FD04B811EFA1FB800E8B6E5 /* AppDelegate.m in Sources */,
+				1FD04BAA1EFA695800E8B6E5 /* EKWKeyboardView.m in Sources */,
+				1FD04BA41EFA65D200E8B6E5 /* EKWCustomInputView.m in Sources */,
 				1FD04B7E1EFA1FB800E8B6E5 /* main.m in Sources */,
+				1FD04BA71EFA680700E8B6E5 /* EKWTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +306,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ekwing.customKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -290,6 +319,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ekwing.customKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

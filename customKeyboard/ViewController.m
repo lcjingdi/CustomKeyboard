@@ -7,23 +7,37 @@
 //
 
 #import "ViewController.h"
+#import "EKWCustomInputView.h"
 
-@interface ViewController ()
+@interface ViewController ()<EKWCustomInputViewDelegate,UITextViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
+@property (nonatomic, strong) EKWCustomInputView *inputView;
 @end
 
 @implementation ViewController
 
+- (void)customInputViewDidChangeText:(EKWCustomInputView *)inputView {
+    self.textView.text = [NSString stringWithFormat:@"%@%@", self.textView.text, inputView.text];
+}
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    [self.textView resignFirstResponder];
+    EKWCustomInputView *inputView = [EKWCustomInputView sharedCustomInputViewTypeNormal];
+    inputView.InputViewDelegate = self;
+    self.inputView = inputView;
+    [self.inputView show];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
 }
-
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    [self.inputView dismiss];
+}
 
 @end
