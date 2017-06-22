@@ -8,6 +8,7 @@
 
 #import "EKWCustomInputView.h"
 #import "CustomKeyboardToolbar.h"
+#import "EKWKeyboardView.h"
 
 static EKWCustomInputView *keyboardCustomInputViewTypeNormal = nil;
 static EKWCustomInputView* keyboardCustomInputViewTypeRecord = nil;
@@ -63,7 +64,8 @@ static EKWCustomInputView* keyboardCustomInputViewTypeRecord = nil;
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
-    self.text = textField.text;
+    self.text = [self.text stringByAppendingString:string];
+    
     if (self.InputViewDelegate && [self.InputViewDelegate respondsToSelector:@selector(customInputViewDidChangeText:)]) {
         [self.InputViewDelegate customInputViewDidChangeText:self];
     }
@@ -71,19 +73,16 @@ static EKWCustomInputView* keyboardCustomInputViewTypeRecord = nil;
     return YES;
 }
 - (void)keyboardToolbar:(CustomKeyboardToolbar *)toolbar btnClickType:(Toolbar_type)btnType {
-
+    
     [self.textField resignFirstResponder];
-    if (btnType == Toolbar_Type_Record) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 80)];
-            v.backgroundColor = [UIColor yellowColor];
-            self.textField.inputView = v;
-            [self.textField becomeFirstResponder];
-        });
-        
-    } else if (btnType == Toolbar_Type_Keyboard) {
+    if (btnType == Toolbar_Type_Keyboard) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             self.textField.inputView = nil;
+            [self.textField becomeFirstResponder];
+        });
+    } else if (btnType == Toolbar_Type_Record) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.textField.inputView = [EKWKeyboardView keyboardViewWithType:KeypboardTypeRecord];
             [self.textField becomeFirstResponder];
         });
     }

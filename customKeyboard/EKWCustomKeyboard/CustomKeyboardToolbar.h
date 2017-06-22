@@ -23,7 +23,6 @@ typedef enum{
 @protocol CustomKeyboardToolbarDelegate <NSObject>
 
 @optional
-//可选代理方法
 - (void)keyboardToolbar:(CustomKeyboardToolbar *)toolbar btnClickType:(Toolbar_type)btnType;
 
 @end

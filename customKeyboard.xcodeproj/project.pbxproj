@@ -7,20 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FB1916F1EFB73C80008EDB0 /* CustomKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB191671EFB73C80008EDB0 /* CustomKeyboardToolbar.m */; };
+		1FB191701EFB73C80008EDB0 /* EKWCustomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB191691EFB73C80008EDB0 /* EKWCustomInputView.m */; };
+		1FB191711EFB73C80008EDB0 /* EKWKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB1916B1EFB73C80008EDB0 /* EKWKeyboardView.m */; };
+		1FB191721EFB73C80008EDB0 /* EKWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FB1916D1EFB73C80008EDB0 /* EKWTextField.m */; };
+		1FB191731EFB73C80008EDB0 /* Toolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FB1916E1EFB73C80008EDB0 /* Toolbar.xib */; };
 		1FD04B7E1EFA1FB800E8B6E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04B7D1EFA1FB800E8B6E5 /* main.m */; };
 		1FD04B811EFA1FB800E8B6E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04B801EFA1FB800E8B6E5 /* AppDelegate.m */; };
 		1FD04B841EFA1FB800E8B6E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04B831EFA1FB800E8B6E5 /* ViewController.m */; };
 		1FD04B871EFA1FB800E8B6E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD04B851EFA1FB800E8B6E5 /* Main.storyboard */; };
 		1FD04B891EFA1FB800E8B6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD04B881EFA1FB800E8B6E5 /* Assets.xcassets */; };
 		1FD04B8C1EFA1FB800E8B6E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD04B8A1EFA1FB800E8B6E5 /* LaunchScreen.storyboard */; };
-		1FD04B9B1EFA5AEE00E8B6E5 /* Toolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FD04B9A1EFA5AEE00E8B6E5 /* Toolbar.xib */; };
-		1FD04B9E1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04B9D1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m */; };
-		1FD04BA41EFA65D200E8B6E5 /* EKWCustomInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04BA31EFA65D200E8B6E5 /* EKWCustomInputView.m */; };
-		1FD04BA71EFA680700E8B6E5 /* EKWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04BA61EFA680700E8B6E5 /* EKWTextField.m */; };
-		1FD04BAA1EFA695800E8B6E5 /* EKWKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD04BA91EFA695800E8B6E5 /* EKWKeyboardView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FB191661EFB73C80008EDB0 /* CustomKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboardToolbar.h; sourceTree = "<group>"; };
+		1FB191671EFB73C80008EDB0 /* CustomKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboardToolbar.m; sourceTree = "<group>"; };
+		1FB191681EFB73C80008EDB0 /* EKWCustomInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWCustomInputView.h; sourceTree = "<group>"; };
+		1FB191691EFB73C80008EDB0 /* EKWCustomInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWCustomInputView.m; sourceTree = "<group>"; };
+		1FB1916A1EFB73C80008EDB0 /* EKWKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWKeyboardView.h; sourceTree = "<group>"; };
+		1FB1916B1EFB73C80008EDB0 /* EKWKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWKeyboardView.m; sourceTree = "<group>"; };
+		1FB1916C1EFB73C80008EDB0 /* EKWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWTextField.h; sourceTree = "<group>"; };
+		1FB1916D1EFB73C80008EDB0 /* EKWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWTextField.m; sourceTree = "<group>"; };
+		1FB1916E1EFB73C80008EDB0 /* Toolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toolbar.xib; sourceTree = "<group>"; };
 		1FD04B791EFA1FB800E8B6E5 /* customKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD04B7D1EFA1FB800E8B6E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1FD04B7F1EFA1FB800E8B6E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,15 +40,6 @@
 		1FD04B881EFA1FB800E8B6E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FD04B8B1EFA1FB800E8B6E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FD04B8D1EFA1FB800E8B6E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FD04B9A1EFA5AEE00E8B6E5 /* Toolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Toolbar.xib; sourceTree = "<group>"; };
-		1FD04B9C1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboardToolbar.h; sourceTree = "<group>"; };
-		1FD04B9D1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboardToolbar.m; sourceTree = "<group>"; };
-		1FD04BA21EFA65D200E8B6E5 /* EKWCustomInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWCustomInputView.h; sourceTree = "<group>"; };
-		1FD04BA31EFA65D200E8B6E5 /* EKWCustomInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWCustomInputView.m; sourceTree = "<group>"; };
-		1FD04BA51EFA680700E8B6E5 /* EKWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWTextField.h; sourceTree = "<group>"; };
-		1FD04BA61EFA680700E8B6E5 /* EKWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWTextField.m; sourceTree = "<group>"; };
-		1FD04BA81EFA695800E8B6E5 /* EKWKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWKeyboardView.h; sourceTree = "<group>"; };
-		1FD04BA91EFA695800E8B6E5 /* EKWKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWKeyboardView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FB191651EFB73C80008EDB0 /* EKWCustomKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1FB191661EFB73C80008EDB0 /* CustomKeyboardToolbar.h */,
+				1FB191671EFB73C80008EDB0 /* CustomKeyboardToolbar.m */,
+				1FB191681EFB73C80008EDB0 /* EKWCustomInputView.h */,
+				1FB191691EFB73C80008EDB0 /* EKWCustomInputView.m */,
+				1FB1916A1EFB73C80008EDB0 /* EKWKeyboardView.h */,
+				1FB1916B1EFB73C80008EDB0 /* EKWKeyboardView.m */,
+				1FB1916C1EFB73C80008EDB0 /* EKWTextField.h */,
+				1FB1916D1EFB73C80008EDB0 /* EKWTextField.m */,
+				1FB1916E1EFB73C80008EDB0 /* Toolbar.xib */,
+			);
+			path = EKWCustomKeyboard;
+			sourceTree = "<group>";
+		};
 		1FD04B701EFA1FB800E8B6E5 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +88,7 @@
 		1FD04B7B1EFA1FB800E8B6E5 /* customKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				1FB191651EFB73C80008EDB0 /* EKWCustomKeyboard */,
 				1FD04B7F1EFA1FB800E8B6E5 /* AppDelegate.h */,
 				1FD04B801EFA1FB800E8B6E5 /* AppDelegate.m */,
 				1FD04B821EFA1FB800E8B6E5 /* ViewController.h */,
@@ -81,15 +98,6 @@
 				1FD04B8A1EFA1FB800E8B6E5 /* LaunchScreen.storyboard */,
 				1FD04B8D1EFA1FB800E8B6E5 /* Info.plist */,
 				1FD04B7C1EFA1FB800E8B6E5 /* Supporting Files */,
-				1FD04B9A1EFA5AEE00E8B6E5 /* Toolbar.xib */,
-				1FD04B9C1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.h */,
-				1FD04B9D1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m */,
-				1FD04BA21EFA65D200E8B6E5 /* EKWCustomInputView.h */,
-				1FD04BA31EFA65D200E8B6E5 /* EKWCustomInputView.m */,
-				1FD04BA51EFA680700E8B6E5 /* EKWTextField.h */,
-				1FD04BA61EFA680700E8B6E5 /* EKWTextField.m */,
-				1FD04BA81EFA695800E8B6E5 /* EKWKeyboardView.h */,
-				1FD04BA91EFA695800E8B6E5 /* EKWKeyboardView.m */,
 			);
 			path = customKeyboard;
 			sourceTree = "<group>";
@@ -164,7 +172,7 @@
 				1FD04B8C1EFA1FB800E8B6E5 /* LaunchScreen.storyboard in Resources */,
 				1FD04B891EFA1FB800E8B6E5 /* Assets.xcassets in Resources */,
 				1FD04B871EFA1FB800E8B6E5 /* Main.storyboard in Resources */,
-				1FD04B9B1EFA5AEE00E8B6E5 /* Toolbar.xib in Resources */,
+				1FB191731EFB73C80008EDB0 /* Toolbar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,13 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FB191721EFB73C80008EDB0 /* EKWTextField.m in Sources */,
+				1FB191701EFB73C80008EDB0 /* EKWCustomInputView.m in Sources */,
 				1FD04B841EFA1FB800E8B6E5 /* ViewController.m in Sources */,
-				1FD04B9E1EFA5D6B00E8B6E5 /* CustomKeyboardToolbar.m in Sources */,
+				1FB1916F1EFB73C80008EDB0 /* CustomKeyboardToolbar.m in Sources */,
 				1FD04B811EFA1FB800E8B6E5 /* AppDelegate.m in Sources */,
-				1FD04BAA1EFA695800E8B6E5 /* EKWKeyboardView.m in Sources */,
-				1FD04BA41EFA65D200E8B6E5 /* EKWCustomInputView.m in Sources */,
 				1FD04B7E1EFA1FB800E8B6E5 /* main.m in Sources */,
-				1FD04BA71EFA680700E8B6E5 /* EKWTextField.m in Sources */,
+				1FB191711EFB73C80008EDB0 /* EKWKeyboardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +350,7 @@
 				1FD04B921EFA1FB800E8B6E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

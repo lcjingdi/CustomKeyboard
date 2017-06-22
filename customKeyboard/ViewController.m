@@ -18,7 +18,7 @@
 @implementation ViewController
 
 - (void)customInputViewDidChangeText:(EKWCustomInputView *)inputView {
-    self.textView.text = [NSString stringWithFormat:@"%@%@", self.textView.text, inputView.text];
+    self.textView.text = inputView.text;
 }
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     [self.textView resignFirstResponder];
@@ -31,13 +31,6 @@
     [super viewDidLoad];
     
     
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-}
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    [self.inputView dismiss];
 }
 
 @end

@@ -15,4 +15,7 @@ typedef NS_ENUM(NSInteger,KeypboardType){
 
 @interface EKWKeyboardView : UIView
 
++ (instancetype)keyboardViewWithType:(KeypboardType)type;
+
 @end
+
