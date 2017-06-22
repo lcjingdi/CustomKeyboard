@@ -25,5 +25,7 @@ typedef NS_ENUM(NSInteger,KeypboardType){
 
 + (instancetype)keyboardViewWithType:(KeypboardType)type;
 
+- (void)keyboardViewDismiss;
+
 @end
 

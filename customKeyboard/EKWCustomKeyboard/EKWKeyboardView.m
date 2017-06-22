@@ -82,6 +82,9 @@
     
     [self startRecord];
 }
+- (void)keyboardViewDismiss {
+    [self stopAnimation];
+}
 - (void)startRecord {
     
     if (self.isAnimation) {

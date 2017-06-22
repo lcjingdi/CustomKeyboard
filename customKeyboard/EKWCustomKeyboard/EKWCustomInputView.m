@@ -13,8 +13,9 @@
 static EKWCustomInputView *keyboardCustomInputViewTypeNormal = nil;
 static EKWCustomInputView* keyboardCustomInputViewTypeRecord = nil;
 
-@interface EKWCustomInputView()<UITextFieldDelegate,CustomKeyboardToolbarDelegate,EKWKeyboardViewDelegate>
+@interface EKWCustomInputView()<UITextFieldDelegate,CustomKeyboardToolbarDelegate,EKWKeyboardViewDelegate,EKWTextFieldDelegate>
 @property (nonatomic, assign) KeypboardType type;
+@property (nonatomic, strong) EKWKeyboardView *keyboardView;
 @end
 
 @implementation EKWCustomInputView
@@ -61,7 +62,6 @@ static EKWCustomInputView* keyboardCustomInputViewTypeRecord = nil;
     
     return self;
 }
-
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
     self.text = [self.text stringByAppendingString:string];
@@ -75,13 +75,14 @@ static EKWCustomInputView* keyboardCustomInputViewTypeRecord = nil;
 - (void)keyboardToolbar:(CustomKeyboardToolbar *)toolbar btnClickType:(Toolbar_type)btnType {
     
     [self.textField resignFirstResponder];
+    [self.keyboardView keyboardViewDismiss];
     if (btnType == Toolbar_Type_Keyboard) {
         self.textField.inputView = nil;
         [self.textField becomeFirstResponder];
     } else if (btnType == Toolbar_Type_Record) {
-        EKWKeyboardView *view = [EKWKeyboardView keyboardViewWithType:KeypboardTypeRecord];
-        view.delegate = self;
-        self.textField.inputView = view;
+        self.keyboardView = [EKWKeyboardView keyboardViewWithType:KeypboardTypeRecord];
+        self.keyboardView.delegate = self;
+        self.textField.inputView = self.keyboardView;
         [self.textField becomeFirstResponder];
     }
 }
