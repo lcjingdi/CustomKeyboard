@@ -11,13 +11,15 @@
 
 #define KEYBOARDHEIGHT 216
 
-@interface EKWKeyboardView()
+@interface EKWKeyboardView()<CAAnimationDelegate>
 ///自定义的View的类型
 @property (nonatomic, assign) KeypboardType type;
 
 @property (nonatomic, strong) UIButton *recordButton;
 
 @property (nonatomic, assign) BOOL isAnimation;
+
+@property (nonatomic, strong) CALayer *recordLayer;
 
 @property(nonatomic,strong)SFSpeechRecognizer *bufferRec;
 @property(nonatomic,strong)AVAudioEngine *bufferEngine;
@@ -37,6 +39,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
+        self.backgroundColor = [UIColor whiteColor];
         self.isAnimation = NO;
         self.type = type;
         [self initSetup];
@@ -129,13 +132,49 @@
         };
     }
 }
-
-- (void)startAnimation {
+//  开始执行动画
+- (void)startAnimation{
     self.isAnimation = YES;
+    CALayer * spreadLayer;
+    spreadLayer = [CALayer layer];
+    CGFloat diameter = 200;  //扩散的大小
+    spreadLayer.bounds = CGRectMake(0,0, diameter, diameter);
+    spreadLayer.cornerRadius = diameter/2; //设置圆角变为圆形
+    spreadLayer.position = self.recordButton.center;
+    spreadLayer.backgroundColor = [UIColor darkGrayColor].CGColor;
+    [self.layer insertSublayer:spreadLayer below:self.recordButton.layer];//把扩散层放到头像按钮下面
+    CAMediaTimingFunction * defaultCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
+    CAAnimationGroup * animationGroup = [CAAnimationGroup animation];
+    animationGroup.duration = 2;
+    animationGroup.repeatCount = INFINITY;//重复无限次
+    animationGroup.removedOnCompletion = NO;
+    animationGroup.timingFunction = defaultCurve;
+    //尺寸比例动画
+    CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale.xy"];
+    scaleAnimation.fromValue = @0.5;//开始的大小
+    scaleAnimation.toValue = @1.0;//最后的大小
+    scaleAnimation.duration = 2;//动画持续时间
+    //透明度动画
+    CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+    opacityAnimation.duration = 2;
+    opacityAnimation.values = @[@0.4, @0.45,@0];//透明度值的设置
+    opacityAnimation.keyTimes = @[@0, @0.2,@1];//关键帧
+    opacityAnimation.removedOnCompletion = NO;
+    animationGroup.animations = @[scaleAnimation, opacityAnimation];//添加到动画组
+    [spreadLayer addAnimation:animationGroup forKey:@"pulse"];
+    
+    self.recordLayer = spreadLayer;
 }
+
+// 移除Layer
+- (void)removeLayer:(CALayer*)layer{
+    [layer removeFromSuperlayer];
+}
+
 - (void)stopAnimation {
     self.isAnimation = NO;
     [self.bufferEngine stop];
+    [self removeLayer:self.recordLayer];
 }
 
 @end
