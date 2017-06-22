@@ -13,7 +13,7 @@
 static EKWCustomInputView *keyboardCustomInputViewTypeNormal = nil;
 static EKWCustomInputView* keyboardCustomInputViewTypeRecord = nil;
 
-@interface EKWCustomInputView()<UITextFieldDelegate,CustomKeyboardToolbarDelegate>
+@interface EKWCustomInputView()<UITextFieldDelegate,CustomKeyboardToolbarDelegate,EKWKeyboardViewDelegate>
 @property (nonatomic, assign) KeypboardType type;
 @end
 
@@ -76,17 +76,25 @@ static EKWCustomInputView* keyboardCustomInputViewTypeRecord = nil;
     
     [self.textField resignFirstResponder];
     if (btnType == Toolbar_Type_Keyboard) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self.textField.inputView = nil;
-            [self.textField becomeFirstResponder];
-        });
+        self.textField.inputView = nil;
+        [self.textField becomeFirstResponder];
     } else if (btnType == Toolbar_Type_Record) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self.textField.inputView = [EKWKeyboardView keyboardViewWithType:KeypboardTypeRecord];
-            [self.textField becomeFirstResponder];
-        });
+        EKWKeyboardView *view = [EKWKeyboardView keyboardViewWithType:KeypboardTypeRecord];
+        view.delegate = self;
+        self.textField.inputView = view;
+        [self.textField becomeFirstResponder];
     }
 }
+
+#pragma mark - EKWKeyboardViewDelegate
+- (void)keyboardText:(NSString *)text {
+    self.text = [self.text stringByAppendingString:text];
+    
+    if (self.InputViewDelegate && [self.InputViewDelegate respondsToSelector:@selector(customInputViewDidChangeText:)]) {
+        [self.InputViewDelegate customInputViewDidChangeText:self];
+    }
+}
+
 //获取当前屏幕显示的viewcontroller
 - (UIViewController *)getCurrentVC
 {
